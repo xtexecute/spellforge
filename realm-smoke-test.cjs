@@ -1,0 +1,32 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const elements=new Map();
+function element(id){
+  if(elements.has(id))return elements.get(id);
+  const classes=new Set(id==='realmPanel'?['hidden']:[]);
+  const node={id,textContent:'',disabled:false,children:[],style:{setProperty(){}},classList:{add:x=>classes.add(x),remove:x=>classes.delete(x),contains:x=>classes.has(x)},append(x){this.children.push(x)},prepend(x){this.children.unshift(x)},querySelector(selector){return element(`${id}-${selector}`)},querySelectorAll(){return[]},addEventListener(){},remove(){}};
+  Object.defineProperty(node,'innerHTML',{get(){return this._html||''},set(value){this._html=value}});
+  elements.set(id,node);return node;
+}
+const local=new Map(),document={documentElement:{style:{setProperty(){}}},body:{append(){}},querySelector(){return element('side')},createElement(tag){return element(`${tag}-${Math.random()}`)},getElementById:element};
+const window={EnemyJournal:{entries:Array.from({length:15},(_,i)=>({id:`e${i}`})),records:Object.fromEntries(Array.from({length:15},(_,i)=>[`e${i}`,{seen:i<3?1:0}]))}};
+const context={window,document,localStorage:{getItem:k=>local.get(k)||null,setItem:(k,v)=>local.set(k,v)},console,Math,Date};
+vm.runInNewContext(fs.readFileSync(__dirname+'/realms.js','utf8'),context);
+const realms=window.RealmSystem;
+assert.equal(realms.current().id,'ember');
+assert.equal(realms.requirement(),15);
+assert.deepEqual(Array.from(realms.enemyPool(1)),['chaser','chaser']);
+assert.doesNotThrow(()=>realms.waveCleared({mode:'normal',wave:1}),'wave completion cannot be blocked by realm progression');
+assert.equal(realms.state.highest[0],1);
+assert.equal(realms.difficulty(),.72);
+assert.equal(realms.danger(),.7);
+assert.equal(realms.population(),.72);
+assert.ok(realms.reward()>=1);
+const waveTenPower=realms.power(10),waveTenDanger=realms.danger(10),waveTenPopulation=realms.population(10);
+assert.equal(realms.waveCleared({mode:'normal',wave:10,kills:42}),undefined,'wave ten records progress without changing realms');
+assert.equal(realms.current().id,'ember');assert.equal(realms.state.highest[0],10);assert.equal(realms.requirement(),15,'realm length remains unchanged');
+realms.state.rebirths=1;realms.state.active=1;realms.state.unlocked=1;
+assert.equal(realms.current().id,'frost');
+assert.ok(Math.abs(realms.power(1)-waveTenPower)<1e-12,'next realm wave one matches previous realm wave ten enemy power');
+assert.ok(Math.abs(realms.danger(1)-waveTenDanger)<1e-12,'incoming damage follows the same difficulty handoff');
+assert.ok(Math.abs(realms.population(1)-waveTenPopulation)<1e-12,'enemy population follows the same difficulty handoff');
+console.log('Realm progression and wave-clear integration passed.');

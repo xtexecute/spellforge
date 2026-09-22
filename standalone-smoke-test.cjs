@@ -1,0 +1,15 @@
+const assert = require('node:assert/strict');
+const fs = require('node:fs');
+const vm = require('node:vm');
+const html = fs.readFileSync(__dirname + '/Spellforge-Mobile.html', 'utf8');
+const scripts = [...html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/g)].map(match => match[1]);
+assert.equal(scripts.length, 9, 'asset manifest plus all eight game scripts are inline');
+for (const script of scripts) new vm.Script(script);
+assert.equal((html.match(/<style>/g) || []).length, 7, 'all styles are inline');
+assert.doesNotMatch(html, /<(?:script|link)\b[^>]+(?:src|href)="(?!data:)/i, 'no external scripts or styles');
+assert.match(html, /href="data:image\/png;base64,/, 'favicon is embedded');
+assert.match(html, /window\.SpellAssetURL\(`assets\/images\/animated\/\$\{name\}\.png`\)/, 'animation sheets resolve from the manifest');
+assert.ok(html.includes("window.SpellAssetURL('assets/images/current/'+entry.id+'.png')"), 'journal portraits resolve from the manifest');
+const assetCount = (scripts[0].match(/data:image\/png;base64,/g) || []).length;
+assert.ok(assetCount >= 60, `expected all artwork embedded; got ${assetCount}`);
+console.log(`Standalone HTML passed: ${scripts.length} scripts, ${assetCount} PNG assets, no sibling file dependencies.`);

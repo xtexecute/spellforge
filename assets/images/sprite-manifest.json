@@ -1,0 +1,615 @@
+{
+  "player": {
+    "file": "current/player.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 16
+  },
+  "chaser": {
+    "file": "current/chaser.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 19
+  },
+  "shooter": {
+    "file": "current/shooter.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 16
+  },
+  "charger": {
+    "file": "current/charger.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 18
+  },
+  "splitter": {
+    "file": "current/splitter.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 18
+  },
+  "swarm": {
+    "file": "current/swarm.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 11
+  },
+  "tank": {
+    "file": "current/tank.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 25
+  },
+  "wisp": {
+    "file": "current/wisp.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 14
+  },
+  "golden": {
+    "file": "current/golden.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 34
+  },
+  "sentinel": {
+    "file": "current/sentinel.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 23
+  },
+  "crimson": {
+    "file": "current/crimson.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 26
+  },
+  "healer": {
+    "file": "current/healer.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 19
+  },
+  "sniper": {
+    "file": "current/sniper.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 16
+  },
+  "burrower": {
+    "file": "current/burrower.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 18
+  },
+  "shieldbearer": {
+    "file": "current/shieldbearer.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 22
+  },
+  "mimic": {
+    "file": "current/mimic.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 19
+  },
+  "mirror": {
+    "file": "current/mirror.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 21
+  },
+  "voidmage": {
+    "file": "current/voidmage.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 17
+  },
+  "voidboss": {
+    "file": "current/voidboss.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 37
+  },
+  "frostboss": {
+    "file": "current/frostboss.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 42
+  },
+  "splitboss": {
+    "file": "current/splitboss.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 39
+  },
+  "splitA": {
+    "file": "current/splitA.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 25
+  },
+  "splitB": {
+    "file": "current/splitB.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 25
+  },
+  "engine": {
+    "file": "current/engine.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 49
+  },
+  "pickup_health": {
+    "file": "current/pickup_health.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "pickup_mana": {
+    "file": "current/pickup_mana.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "pickup_shield": {
+    "file": "current/pickup_shield.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "missile": {
+    "file": "current/missile.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "void_orb": {
+    "file": "current/void_orb.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "mine": {
+    "file": "current/mine.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "crystal": {
+    "file": "current/crystal.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "stone": {
+    "file": "current/stone.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "engine_core": {
+    "file": "current/engine_core.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "engine_arm": {
+    "file": "current/engine_arm.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "voidboss_core": {
+    "file": "current/voidboss_core.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right"
+  },
+  "cinderhound": {
+    "file": "current/cinderhound.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 19
+  },
+  "rimeweaver": {
+    "file": "current/rimeweaver.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 18
+  },
+  "thunderhead": {
+    "file": "current/thunderhead.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 18
+  },
+  "sporebrute": {
+    "file": "current/sporebrute.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 24
+  },
+  "sunlancer": {
+    "file": "current/sunlancer.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 19
+  },
+  "riftstalker": {
+    "file": "current/riftstalker.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 18
+  },
+  "shardsmith": {
+    "file": "current/shardsmith.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 22
+  },
+  "graviton": {
+    "file": "current/graviton.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 20
+  },
+  "tempestboss": {
+    "file": "current/tempestboss.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 45
+  },
+  "broodboss": {
+    "file": "current/broodboss.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 48
+  },
+  "sunboss": {
+    "file": "current/sunboss.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 45
+  },
+  "prismboss": {
+    "file": "current/prismboss.png",
+    "canvas": [
+      256,
+      256
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 47
+  },
+  "vectorscribe": {
+    "file": "current/vectorscribe.png",
+    "canvas": [
+      128,
+      128
+    ],
+    "anchor": [
+      0.5,
+      0.5
+    ],
+    "faces": "right",
+    "displayRadius": 19
+  }
+}
